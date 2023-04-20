@@ -4,13 +4,13 @@ import 'firebase/firestore';
 import 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA31oxc0deu3OlYPB7GnBkWap6t-gWC78M",
-  authDomain: "vittoriavitt-6ffd0.firebaseapp.com",
-  projectId: "vittoriavitt-6ffd0",
-  storageBucket: "vittoriavitt-6ffd0.appspot.com",
-  messagingSenderId: "297891922453",
-  appId: "1:297891922453:web:78aafcf4c746f1fe15441c",
-  measurementId: "G-L1H11888T2"
+  apiKey: "AIzaSyA5TqMxCWndWky4Qpp_Y3MxJRyF6cxNGbc",
+  authDomain: "ecommercetest-3dc20.firebaseapp.com",
+  projectId: "ecommercetest-3dc20",
+  storageBucket: "ecommercetest-3dc20.appspot.com",
+  messagingSenderId: "1060393462215",
+  appId: "1:1060393462215:web:41d8059e925173298c91e2",
+  measurementId: "G-2FTMQVB5R6"
 };
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);

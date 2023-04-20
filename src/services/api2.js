@@ -1,7 +1,6 @@
 import axios from "axios";
 const api = axios.create({
-    baseURL: "https://web-production-a074.up.railway.app/",
-    //baseURL: "https://apivittoriaviitstore.herokuapp.com/",
+    baseURL: "https://ecommerce-api-idyt.onrender.com/",
 });
 
 export default api;

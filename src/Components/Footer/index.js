@@ -30,11 +30,10 @@ export default function Footer() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    api.get('/edicao')
-      .then((value) => {
-        setData(value?.data)
-      })
-  }, [data])
+    api.get("/edicao").then((value) => {
+      setData(value?.data);
+    });
+  }, [data]);
 
   async function cadastrodeemail() {
     if (checkbox == false) {
@@ -56,12 +55,8 @@ export default function Footer() {
         toast.success("Cadastro realizado com sucesso!");
         setTelefone("");
         setNomecliente("");
-        document
-          .querySelectorAll(".check")[0]
-          .setAttribute("style", "color:white");
-        document
-          .querySelectorAll(".check")[1]
-          .setAttribute("style", "color:white");
+        document.querySelectorAll(".check")[0].setAttribute("style", "color:white");
+        document.querySelectorAll(".check")[1].setAttribute("style", "color:white");
         setCheckbox(false);
       });
   }
@@ -96,29 +91,24 @@ export default function Footer() {
         </div>
         {window.screen.width < 500 ? (
           <div className="input-email-promocao-checkbox">
-            <input
-              onChange={() => setCheckbox(true)}
-              type="checkbox"
-              required
-            ></input>
+            <input onChange={() => setCheckbox(true)} type="checkbox" required></input>
             <span
               className="check"
               style={
                 window.screen.width > 500
                   ? {
-                    fontSize: "17px",
-                    color: "white",
-                    fontFamily: "Montserrat",
-                  }
+                      fontSize: "17px",
+                      color: "white",
+                      fontFamily: "Montserrat",
+                    }
                   : {
-                    fontSize: "9px",
-                    color: "white",
-                    fontFamily: "Montserrat",
-                  }
+                      fontSize: "9px",
+                      color: "white",
+                      fontFamily: "Montserrat",
+                    }
               }
             >
-              Gostaria de ser avisado com prioridade das promoções e lançamentos
-              da loja.
+              Gostaria de ser avisado com prioridade das promoções e lançamentos da loja.
             </span>
           </div>
         ) : (
@@ -140,8 +130,7 @@ export default function Footer() {
                 : { fontSize: "9px", color: "white", fontFamily: "Montserrat" }
             }
           >
-            Gostaria de ser Avisada(o) com prioridade das promoções e lançamentos
-            da loja.
+            Gostaria de ser Avisada(o) com prioridade das promoções e lançamentos da loja.
           </span>
         </div>
       ) : (
@@ -177,24 +166,46 @@ export default function Footer() {
         </div>
 
         <div className="logo-footer">
-          <img src={logo}></img>
           <div className="redes-text-flex-direction">
             <span>Nossas Redes</span>
-            {<div className="redes-sociais-footer">
-              <a href={data.map(item => item?.linkredes?.link1)[0]}>
-                <img src={data.map(item => item?.icon1)[0] == ''? face : data.map(item => item?.icon1)[0] }></img>
-              </a>
-              <a href={data.map(item => item?.linkredes?.link2)[0]}>
-                <img src={data.map(item => item?.icon2)[0] == ''? insta : data.map(item => item?.icon2)[0]}></img>
-              </a>
-              <a href={data.map(item => item?.linkredes?.link3)[0]}>
-                <img src={data.map(item => item?.icon3)[0] == ''? whats : data.map(item => item?.icon3)[0]}></img>
-              </a>
-      </div>}
+            {
+              <div className="redes-sociais-footer">
+                <a href={data.map((item) => item?.linkredes?.link1)[0]}>
+                  <img
+                    alt="img"
+                    src={
+                      data.map((item) => item?.icon1)[0] == ""
+                        ? face
+                        : data.map((item) => item?.icon1)[0]
+                    }
+                  ></img>
+                </a>
+                <a href={data.map((item) => item?.linkredes?.link2)[0]}>
+                  <img
+                    alt="img"
+                    src={
+                      data.map((item) => item?.icon2)[0] == ""
+                        ? insta
+                        : data.map((item) => item?.icon2)[0]
+                    }
+                  ></img>
+                </a>
+                <a href={data.map((item) => item?.linkredes?.link3)[0]}>
+                  <img
+                    alt="img"
+                    src={
+                      data.map((item) => item?.icon3)[0] == ""
+                        ? whats
+                        : data.map((item) => item?.icon3)[0]
+                    }
+                  ></img>
+                </a>
+              </div>
+            }
             <div className="info-empresa-footer">
-              <p>{data.map(item => item?.telefoneloja)[0]}</p>
-              <p>{data.map(item => item?.emailloja)[0]}</p>
-              <p>{data.map(item => item?.cnpjloja)[0]}</p>
+              <p>{data.map((item) => item?.telefoneloja)[0]}</p>
+              <p>{data.map((item) => item?.emailloja)[0]}</p>
+              <p>{data.map((item) => item?.cnpjloja)[0]}</p>
             </div>
           </div>
         </div>
@@ -204,25 +215,14 @@ export default function Footer() {
           <p style={{ color: "#fff" }}>FORMAS DE PAGAMENTO</p>
         </div>
         <div>
-          <img src={visa}></img>
-          <img src={master}></img>
-          <img src={amex}></img>
-          <img src={diners}></img>
-          <img src={hiper}></img>
-          <img src={pix}></img>
-          <img src={boleto}></img>
+          <img alt="img" src={visa}></img>
+          <img alt="img" src={master}></img>
+          <img alt="img" src={amex}></img>
+          <img alt="img" src={diners}></img>
+          <img alt="img" src={hiper}></img>
+          <img alt="img" src={pix}></img>
+          <img alt="img" src={boleto}></img>
         </div>
-      </div>
-      <div className="certificados">
-        <img src={abcomm}></img>
-        <img src={google}></img>
-        <img src={ssl}></img>
-      </div>
-      <div
-        onClick={() => (window.location.href = "https://gspace.com.br")}
-        className="title-gspace"
-      >
-        Desenvolvido com <FaHeart color="red"></FaHeart> por Gspace
       </div>
     </footer>
   );

@@ -1,6 +1,6 @@
 footer {
   width: 100%;
-  background: #e06f84;
+  background: #2d2d2d;
 
   display: flex;
   flex-direction: column;
@@ -121,7 +121,7 @@ footer {
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  background: #de4563;
+  background: #000;
   border-radius: 19px;
   border: 0px;
   color: white;
@@ -201,7 +201,7 @@ footer {
   padding-bottom: 20px;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
-  background-color: #de4563;
+  background-color: #2d2d2d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,7 +274,7 @@ footer {
   .certificados {
     display: flex;
     width: 100%;
-    background-color: #de4563;
+    background-color: #2d2d2d;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;

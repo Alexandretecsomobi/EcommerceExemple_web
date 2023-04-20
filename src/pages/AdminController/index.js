@@ -4850,7 +4850,7 @@ export default function AdminController() {
   async function atualizarhome() {
     setLoad(true);
     await api
-      .put(`/edicao/641a0280f583ba3c77172b53`, {
+      .put(`/edicao/644085c4a82c536104334bf0`, {
         headers: {
           Authorization: "Access-Control-Allow-Origin",
         },
